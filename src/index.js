@@ -13,7 +13,7 @@ app.use("/api", animalRoutes);
 app.use("/api2", authRoutes);
 app.use(express.json());
 mongoose
-    .connect(process.env.MONGODB_URI)
+    .connect(process.env.MONGODB_URL)
     .then(() => console.log("Conexión exitosa"))
     .catch((error) => console.log(error));
 app.listen(port, () => {
